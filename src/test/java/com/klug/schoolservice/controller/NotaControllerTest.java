@@ -40,7 +40,7 @@ public class NotaControllerTest {
                         .with(SecurityMockMvcRequestPostProcessors.csrf()) // Adicionar token CSRF
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(json))
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andExpect(content().json("{\"id\":1,\"aluno\":null,\"disciplina\":null,\"valor\":8.0}"));
     }
 

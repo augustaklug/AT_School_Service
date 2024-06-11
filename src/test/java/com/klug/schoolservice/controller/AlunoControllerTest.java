@@ -45,7 +45,7 @@ public class AlunoControllerTest {
                         .with(SecurityMockMvcRequestPostProcessors.csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(json))
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andExpect(content().json("{\"id\":1,\"nome\":\"Test\",\"cpf\":\"123.456.789-00\",\"email\":\"test@example.com\",\"telefone\":\"1234567890\",\"endereco\":\"Street\"}"));
     }
 
