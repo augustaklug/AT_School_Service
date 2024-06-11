@@ -83,3 +83,59 @@ Role: USER
 - **GET /api/notas/reprovados**
   - Retorna a lista de alunos reprovados em uma disciplina específica.
   - Parâmetro: `disciplinaId`
+
+## Estrutura de diretórios
+
+ ```
++---main
+|   +---java
+|   |   \---com
+|   |       \---klug
+|   |           \---schoolservice
+|   |               |   SchoolserviceApplication.java
+|   |               |   
+|   |               +---controller
+|   |               |       AlunoController.java
+|   |               |       DisciplinaController.java
+|   |               |       NotaController.java
+|   |               |       
+|   |               +---model
+|   |               |       Aluno.java
+|   |               |       Disciplina.java
+|   |               |       Nota.java
+|   |               |       
+|   |               +---repository
+|   |               |       AlunoRepository.java
+|   |               |       DisciplinaRepository.java
+|   |               |       NotaRepository.java
+|   |               |       
+|   |               +---security
+|   |               |       WebSecurityConfig.java
+|   |               |       
+|   |               \---service
+|   |                       AlunoService.java
+|   |                       DisciplinaService.java
+|   |                       NotaService.java
+|   |                       
+|   \---resources
+|       |   application.properties
+|       |   
+|       +---static
+|       \---templates
+\---test
+    \---java
+        \---com
+            \---klug
+                \---schoolservice
+                    |   SchoolserviceApplicationTests.java
+                    |   
+                    +---controller
+                    |       AlunoControllerTest.java
+                    |       DisciplinaControllerTest.java
+                    |       NotaControllerTest.java
+                    |       
+                    \---service
+                            AlunoServiceTest.java
+                            DisciplinaServiceTest.java
+                            NotaServiceTest.java
+ ```
